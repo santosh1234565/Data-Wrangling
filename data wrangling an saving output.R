@@ -12,6 +12,10 @@ df2 <- df1[-6:-8]
 na.omit(df2)
 df2
 
+# if you want to remove the data from 1998 from the year column in analysis
+#use negation (!) )
+subset(df, Year!="1998") 
+
 #gather and spread for data manipulation
 df3 <- df2 %>% gather("Year", "Soil pH", pH1998, pH2008, pH2015)
 df6 <- df3 %>% spread("Year", "Soil pH")
